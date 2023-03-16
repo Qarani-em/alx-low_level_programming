@@ -1,2 +1,6 @@
 #!/bin/bash
-gcc -S $1 -o ${1%.c}.s
+CFILE="your_c_file_name.c"
+OUTPUT_FILE="${CFILE%.c}.s"
+
+# Generate assembly code and save it to the output file
+gcc -S $CFILE -o $OUTPUT_FILE
